@@ -1,0 +1,31 @@
+.card {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #b465da, #ee609c);
+  margin: 3rem auto;
+  min-width: 16rem;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    border-radius: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .card {
+    border-radius: 10px;
+    margin: 4rem auto;
+  }
+}

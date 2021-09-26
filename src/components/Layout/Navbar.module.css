@@ -1,0 +1,167 @@
+.navbar {
+  background: linear-gradient(to right, #b465da, #ee609c);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  min-width: 14rem;
+}
+
+/* Navbar Menu */
+.navbarMenu {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarBrand {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.navbarIcon {
+  display: none;
+}
+
+/* NavbarItems */
+.navbarItems {
+  flex: 2;
+  overflow: hidden;
+}
+
+.reactIcon {
+  font-size: 2rem;
+  vertical-align: middle;
+  margin-right: 0.8rem;
+}
+
+.listGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 15rem;
+}
+
+.listGroup a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.2s ease-out;
+}
+
+.listGroup a:hover {
+  color: coral;
+  cursor: pointer;
+}
+
+.closeIcon {
+  color: white;
+  font-size: 2rem;
+  vertical-align: middle;
+  margin-right: 0.8rem;
+  transform: all 1s ease-in;
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbarMenu {
+    flex-direction: row-reverse;
+  }
+
+  .navbarIcon {
+    display: block;
+  }
+
+  .listGroup {
+    height: 20rem;
+    flex-direction: column;
+    margin-right: 0;
+    transition: height 0.3s ease;
+  }
+
+  .hidden {
+    height: 0;
+  }
+
+  .listGroup li {
+    margin-top: 1.5rem;
+  }
+
+  .listGroup li:first-child {
+    margin-top: 2.5rem;
+  }
+  .listGroup li:last-child {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbarBrand {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarBrand {
+    font-size: 1.4rem;
+  }
+
+  .listGroup {
+    height: 15rem;
+  }
+
+  .hidden {
+    height: 0;
+  }
+
+  .listGroup a {
+    font-size: 1rem;
+  }
+
+  .reactIcon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .closeIcon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .listGroup li:first-child {
+    margin-top: 1.5rem;
+  }
+  .listGroup li:last-child {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .navbarBrand {
+    font-size: 1.2rem;
+  }
+
+  .listGroup {
+    height: 13rem;
+  }
+
+  .listGroup a {
+    font-size: 1rem;
+  }
+
+  .reactIcon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+  .closeIcon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+  .hidden {
+    height: 0;
+  }
+}

@@ -1,0 +1,20 @@
+.btn {
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,90 @@
+.ItemsList {
+  padding: 1rem;
+  width: 70%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.center {
+  text-align: center;
+  color: red;
+  font-weight: 400;
+  background-color: aqua;
+}
+
+.searchBox {
+  position: relative;
+}
+
+.searchBox select {
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 7rem;
+  text-align: center;
+}
+
+.listGroup {
+  list-style-type: none;
+}
+
+@media (max-width: 1200px) {
+  .ItemsList {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .ItemsList {
+    width: 90%;
+  }
+  .searchBox select {
+    border-radius: 7px;
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    min-width: 6.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBox select {
+    border-radius: 6px;
+    padding: 0.3rem;
+    font-size: 1rem;
+    min-width: 5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .ItemsList {
+    width: 94%;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .searchBox select {
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: 0.3rem;
+    min-width: 4.5rem;
+  }
+}

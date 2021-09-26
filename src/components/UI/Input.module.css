@@ -1,0 +1,65 @@
+.formGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  flex: 1;
+  text-align: start;
+}
+
+.inputBox {
+  flex: 1;
+}
+
+.inputBox input {
+  border: none;
+  outline: none;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.inputBox p {
+  font-size: 0.7rem;
+  color: rgb(197, 2, 2);
+}
+
+.touched:focus {
+  background-color: rgb(187, 187, 235);
+}
+
+.formGroup .invalid {
+  background-color: rgb(219, 126, 144);
+  border: 1px solid crimson;
+}
+
+@media (max-width: 992px) {
+  .inputBox input {
+    padding: 0.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .formGroup label {
+    font-size: 1.1rem;
+  }
+  .inputBox input {
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+}
+@media (max-width: 576px) {
+  .formGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .formGroup label {
+    font-size: 0.9rem;
+  }
+}

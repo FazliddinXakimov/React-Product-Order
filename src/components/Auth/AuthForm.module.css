@@ -1,0 +1,122 @@
+.AuthForm {
+  width: 35%;
+  padding: 1rem;
+}
+
+.AuthForm h2 {
+  text-align: center;
+  color: white;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-top: 2rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  flex: 3;
+}
+
+.inputBox {
+  width: 100%;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  cursor: pointer;
+  color: grey;
+  right: 4px;
+  top: 8px;
+}
+
+.formGroup input {
+  flex: 4;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 0.4rem;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background-color: rgb(29, 29, 235);
+  width: 100%;
+  max-width: 10rem;
+  margin: 2rem auto 1rem;
+  display: block;
+  font-size: 1.3rem;
+}
+
+.selectOption {
+  text-align: center;
+  color: orange;
+  cursor: pointer;
+}
+
+.selectOption:hover {
+  color: ivory;
+}
+
+@media (max-width: 1200px) {
+  .AuthForm {
+    width: 40%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .AuthForm {
+    width: 45%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .AuthForm {
+    width: 55%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .AuthForm {
+    width: 90%;
+    padding: 1rem 1.5rem;
+  }
+
+  .AuthForm h2 {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .formGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formGroup input {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    top: 6px;
+  }
+
+  .btn {
+    max-width: inherit;
+    font-size: 1rem;
+  }
+  .selectOption {
+    text-align: center;
+    color: orange;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+}

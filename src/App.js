@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext, Fragment } from "react";
+import { Redirect, Route, Switch } from "react-router";
+import { ToastContainer } from "react-toastify";
+import Layout from "./components/Layout/Layout";
+import Auth from "./pages/auth";
+import Home from "./pages/home";
+import About from "./pages/about";
+import { AuthContext } from "./store/auth-context";
+import Profile from "./components/Profile/Profile";
+import "react-toastify/dist/ReactToastify.css";
 
-function App() {
+const App = (props) => {
+  const authCtx = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <ToastContainer className="toast" />
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to="/auth" />
+        </Route>
+        <Route path="/auth">
+          <Auth />
+        </Route>
+        {!authCtx.userIsLoggedIn && (
+          <Route path="*">
+            <Redirect to="/auth" />
+          </Route>
+        )}
+        {authCtx.userIsLoggedIn && (
+          <Layout>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="*">
+              <Redirect to="/home" />
+            </Route>
+          </Layout>
+        )}
+      </Switch>
+    </Fragment>
   );
-}
+};
 
 export default App;

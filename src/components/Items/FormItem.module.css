@@ -1,0 +1,91 @@
+.FormItem {
+  width: 45%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.FormItem h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.identifier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.identifier span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: gold;
+}
+
+.identifier img {
+  width: 4rem;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.btnBack {
+  background-color: crimson;
+}
+
+.btnSave {
+  background-color: rgb(29, 29, 235);
+}
+
+@media (max-width: 1200px) {
+  .FormItem {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .FormItem {
+    width: 60%;
+  }
+
+  .FormItem h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .FormItem {
+    width: 70%;
+  }
+  .FormItem h1 {
+    font-size: 1.3rem;
+  }
+
+  .identifier span {
+    font-size: 1.1rem;
+  }
+
+  .identifier img {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .FormItem {
+    width: 94%;
+  }
+  .FormItem h1 {
+    font-size: 1.1rem;
+  }
+  .identifier {
+    flex-direction: column-reverse;
+  }
+
+  .identifier span {
+    font-size: 1rem;
+  }
+}
